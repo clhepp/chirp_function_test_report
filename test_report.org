@@ -1,0 +1,32 @@
+* COMMENT SetUp
+#+TITLE:     CHIRP Functional Test Report.
+#+AUTHOR:    C. Hepplewhite, L. Larrabee Strow, UMBC
+#+EMAIL:     strow@umbc.edu
+#+DATE:      June 2021  
+#+THANKS:    ()
+#+LATEX_CLASS_OPTIONS: [10pt,twocolumn]
++OPTIONS: H:3 toc:true
+#+LATEX_HEADER: \input /Users/strow/Tex/Templates/article_setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://asl.umbc.edu/images/asl.css" />
+
+* COMMENT Contract 
+- Climate Hyperspectral InfraRed Radiance Product (CHIRP)
+- Production Assessment.
+
+* Purpose and Scope
+
+The purpose of the work reported herein is to qualify that the CHIRP product as supplied
+by the DAAC conforms to the same as designed by the group at UMBC/JCET.
+
+The CHIRP product is currently derived from three parent sensor records; the NASA Aqua AIRS; the
+NOAA SNPP CrIS, and the NOAA JPSS-1 CrIS. In each case the original radiance spectra are 
+translated to the CHIRP spectral grid, and the geolocation data are coped forward to the
+CHIRP data, such that the format and content of each granule of the parent matches the granule
+of the CHIRP.
+
+The scope of this work includes verification that the translation of the radiance to the
+CHIRP spectral grid conforms that that prescribed by the concurrent version of translation
+suite established at UMBC/JCET. In addition, that the granule geolocation data are unchanged
+from the parent sensor record.
+
+
