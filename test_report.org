@@ -29,4 +29,60 @@ CHIRP spectral grid conforms that that prescribed by the concurrent version of t
 suite established at UMBC/JCET. In addition, that the granule geolocation data are unchanged
 from the parent sensor record.
 
+The intent here is only to qualify that the spectral translation and bias shift have been
+applied correctly to the parent spectra, and that the geolocation of the parent granule
+is unchanged by the processing.
 
+
+* Experiments
+
+A single experiment is conducted on each of the three CHIRP products. This involved
+selecting a granule with some views of warm ocean and cold clouds and comparing geolocation
+and radiance data from the CHIRP and the parent sensor record for the same granule.
+A different granule is required for the three versions, but all are chosen from 
+01-Jan-2020.
+
+The radiance data from the parent sensor for the chosen granule is passed through the
+translation code and compared to those from the CHIRP granule. There are typically 12150
+observations per granule. The values are simply compared as shown in the following figures.
+
+* Results
+
+The results are shown in graphical form in the following figures. 
+Figures show the location of the granule, with the LW window channel near 900 cm-1 
+brightness temperature.
+Also the individual sample geolocation compared between the CHIRP and the parent granule
+and a LW window channel signal difference for every sample in the granule.
+Finally the spectrum of the granule mean and standard deviation of the samples and
+the difference between CHIRP and parent product. 
+
+** CHIRP.SNPP
+
+#+LABEL: fig:chirp_j1_map
+#+CAPTION: Location map of test granule. Shown is the 900cm-1 channel brightness temperature.
+#+ATTR_HTML:  :width 650 px 
+[[./figs/2020d001g120_chirp_j1_900cn_bt_map.pdf]]
+
+#+LABEL: fig:chirp_j1_geo
+#+CAPTION: Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g120_chirp_j1_geo_diff.pdf]]
+
+#+LABEL: fig:chirp_j1_spectrum mean
+#+CAPTION: Mean spectral BT for granule (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g120_chirp_j1_bt_spectrum_mean.pdf]]
+
+#+LABEL: fig:chirp_j1_spectrum_std
+#+CAPTION: Standard deviation of samples (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g120_chirp_j1_bt_spectrum_std.pdf]]
+
+
+
+
+** CHIRP.J1
+
+** CHIRP.AQ
+
+* Conclusions
