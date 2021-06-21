@@ -1,0 +1,5 @@
+# LaTeX support files
+*.aux
+*.log
+*.out
+*.synctex.gz

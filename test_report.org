@@ -1,3 +1,25 @@
+#+option: title:nil toc:nil
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+ 
+TITLE: CHIRP Product Function Test Report.
+
+DATE: Jun 2021.
+
+AUTHORS: C. L. Hepplewhite, UMBC/JCET.
+
+EXECUTIVE SUMMARY:
+
+A function test is performed on a sample of CHIRP granules supplied by the DAAC,
+involving simple comparison to an independent production at UMBC/JCET.
+
+Based on geolocation and radiometric data the CHIRP product is found to conform to
+that expected by the design team at UMBC/JCET.
+
+\end{titlepage}
+#+END_EXPORT
+
+
 * COMMENT SetUp
 #+TITLE:     CHIRP Functional Test Report.
 #+AUTHOR:    C. Hepplewhite, L. Larrabee Strow, UMBC
@@ -6,12 +28,13 @@
 #+THANKS:    ()
 #+LATEX_CLASS_OPTIONS: [10pt,twocolumn]
 +OPTIONS: H:3 toc:true
-#+LATEX_HEADER: \input /Users/strow/Tex/Templates/article_setup
+#+LATEX_HEADER: \input article_setup.tex
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="http://asl.umbc.edu/images/asl.css" />
 
 * COMMENT Contract 
 - Climate Hyperspectral InfraRed Radiance Product (CHIRP)
 - Production Assessment.
+
 
 * Purpose and Scope
 
@@ -20,12 +43,12 @@ by the DAAC conforms to the same as designed by the group at UMBC/JCET.
 
 The CHIRP product is currently derived from three parent sensor records; the NASA Aqua AIRS; the
 NOAA SNPP CrIS, and the NOAA JPSS-1 CrIS. In each case the original radiance spectra are 
-translated to the CHIRP spectral grid, and the geolocation data are coped forward to the
+translated to the CHIRP spectral grid, and the geolocation data are copied forward to the
 CHIRP data, such that the format and content of each granule of the parent matches the granule
 of the CHIRP.
 
 The scope of this work includes verification that the translation of the radiance to the
-CHIRP spectral grid conforms that that prescribed by the concurrent version of translation
+CHIRP spectral grid conforms to that prescribed by the concurrent version of translation
 suite established at UMBC/JCET. In addition, that the granule geolocation data are unchanged
 from the parent sensor record.
 
@@ -49,18 +72,29 @@ observations per granule. The values are simply compared as shown in the followi
 * Results
 
 The results are shown in graphical form in the following figures. 
-Figures show the location of the granule, with the LW window channel near 900 cm-1 
+Figures show the location of the granule, with the LW window channel near 900 $cm^{-1}$ 
 brightness temperature.
 Also the individual sample geolocation compared between the CHIRP and the parent granule
 and a LW window channel signal difference for every sample in the granule.
 Finally the spectrum of the granule mean and standard deviation of the samples and
 the difference between CHIRP and parent product. 
 
-** CHIRP.SNPP
+** CHIRP.J1
+
+This set of results relates to the CHIRP from JPSS-1 and its parent.
+
+Figure Fig. \ref{fig:chirp_j1_map} shows the 900 cm-1 brightnes temperature for the selected granule, being in the tropical pacific Ocean.
+
+Figure Fig. \ref{fig:chirp_j1_geo} shows the differences of the time, the latitude and the longitude of every sample in the granule  reported in the CHIRP and the parent granule. The difference of the 899.375 cm-1 channel BT is also shown. there is no difference in the geolocation data and only single bit differences in the BT, which are negligible.
+
+Figure Fig. \ref{fig:chirp_j1_spectrum_mean} upper panel shows the mean BT spectrum for all samples in the granule for the CHIRP and parent. The lower panel shows the difference of the means, which is negligible in all CHIRP channels.
+
+Figure Fig. \ref{fig:chirp_j1_spectrum_std} upper panel shows the standard deviation of the samples in the granule for both the CHIRP and its parent, and the lower panel the difference of the sample standard deviations. Again there is negligible difference.
 
 #+LABEL: fig:chirp_j1_map
 #+CAPTION: Location map of test granule. Shown is the 900cm-1 channel brightness temperature.
 #+ATTR_HTML:  :width 650 px 
+#+ATTR_LATEX: :width 9cm :options angle=0
 [[./figs/2020d001g120_chirp_j1_900cn_bt_map.pdf]]
 
 #+LABEL: fig:chirp_j1_geo
@@ -81,8 +115,73 @@ the difference between CHIRP and parent product.
 
 
 
-** CHIRP.J1
+** CHIRP.SNPP
+
+This set of results relates to the CHIRP from SNPP and its parent.
+
+Figure Fig. \ref{fig:chirp_snpp_map} shows the 900 cm-1 brightnes temperature for the selected granule, being in the tropical pacific Ocean.
+
+Figure Fig. \ref{fig:chirp_snpp_geo} shows the differences of the time, the latitude and the longitude of every sample in the granule  reported in the CHIRP and the parent granule. The difference of the 899.375 cm-1 channel BT is also shown. there is no difference in the geolocation data and BT.
+
+Figure Fig. \ref{fig:chirp_snpp_spectrum_mean} upper panel shows the mean BT spectrum for all samples in the granule for the CHIRP and parent. The lower panel shows the difference of the means, which is effectively zero in all CHIRP channels.
+
+Figure Fig. \ref{fig:chirp_snpp_spectrum_std} upper panel shows the standard deviation of the samples in the granule for both the CHIRP and its parent, and the lower panel the difference of the sample standard deviations. Again there is no difference.
+
+#+LABEL: fig:chirp_snpp_map
+#+CAPTION: Location map of test granule. Shown is the 900cm-1 channel brightness temperature.
+#+ATTR_HTML:  :width 650 px 
+#+ATTR_LATEX: :width 9cm :options angle=0
+[[./figs/2020d001g238_900cm_bt_map_snpp.pdf]]
+
+#+LABEL: fig:chirp_snpp_geo
+#+CAPTION: Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g238_geo_diff_snpp.pdf]]
+
+#+LABEL: fig:chirp_j1_spectrum mean
+#+CAPTION: Mean spectral BT for granule (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g238_bt_spectrum_mean.pdf]]
+
+#+LABEL: fig:chirp_j1_spectrum_std
+#+CAPTION: Standard deviation of samples (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g238_bt_spectrum_std.pdf]]
+
+
 
 ** CHIRP.AQ
+
+This set of results relates to the CHIRP from AIRS and its parent.
+
+Figure Fig. \ref{fig:chirp_aq_map} shows the 900 cm-1 brightnes temperature for the selected granule, being in the tropical pacific Ocean.
+
+Figure Fig. \ref{fig:chirp_aq_geo} shows the differences of the time, the latitude and the longitude of every sample in the granule  reported in the CHIRP and the parent granule. The difference of the 899.375 cm-1 channel BT is also shown. The differences in the geolocation data are negligible and can be ignored, the difference in the 893.375 cm-1 BT channel are typically seen as the conversion routine does most work for AIRS, and the difference is negligible.
+
+Figure Fig. \ref{fig:chirp_aq_spectrum_mean} upper panel shows the mean BT spectrum for all samples in the granule for the CHIRP and parent. The lower panel shows the difference of the means, which is very small and centered on zero in all CHIRP channels and is effectively negligible.
+
+Figure Fig. \ref{fig:chirp_aq_spectrum_std} upper panel shows the standard deviation of the samples in the granule for both the CHIRP and its parent, and the lower panel the difference of the sample standard deviations. The differences are very small and centered on zero in all channels and is effectively negligible.
+
+#+LABEL: fig:chirp_aq_map
+#+CAPTION: Location map of test granule. Shown is the 900cm-1 channel brightness temperature.
+#+ATTR_HTML:  :width 650 px 
+#+ATTR_LATEX: :width 9cm :options angle=0
+[[./figs/2020d001g235_chirp_aq_900cm_bt_map.pdf]]
+
+#+LABEL: fig:chirp_aq_geo
+#+CAPTION: Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g235_chirp_aq_geo_diff.pdf]]
+
+#+LABEL: fig:chirp_aq_spectrum mean
+#+CAPTION: Mean spectral BT for granule (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g235_chirp_aq_bt_spectrum_mean.pdf]]
+
+#+LABEL: fig:chirp_aq_spectrum_std
+#+CAPTION: Standard deviation of samples (upper) Difference (lower).
+#+ATTR_HTML:  :width 650 px
+[[./figs/2020d001g235_chirp_aq_bt_spectrum_std.pdf]]
+
 
 * Conclusions
