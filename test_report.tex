@@ -1,4 +1,4 @@
-% Created 2021-06-21 Mon 10:34
+% Created 2021-06-21 Mon 11:44
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,13 +30,25 @@
 
 \begin{titlepage}
  
-This is the title page
+TITLE: CHIRP Product Function Test Report.
+
+DATE: Jun 2021.
+
+AUTHORS: C. L. Hepplewhite, UMBC/JCET.
+
+EXECUTIVE SUMMARY:
+
+A function test is performed on a sample of CHIRP granules supplied by the DAAC,
+involving simple comparison to an independent production at UMBC/JCET.
+
+Based on geolocation and radiometric data the CHIRP product is found to conform to
+that expected by the design team at UMBC/JCET.
 
 \end{titlepage}
 
 
 \section{Purpose and Scope}
-\label{sec:org143a6d7}
+\label{sec:org1488f7b}
 
 The purpose of the work reported herein is to qualify that the CHIRP product as supplied
 by the DAAC conforms to the same as designed by the group at UMBC/JCET.
@@ -58,7 +70,7 @@ is unchanged by the processing.
 
 
 \section{Experiments}
-\label{sec:org592b646}
+\label{sec:org0e598df}
 
 A single experiment is conducted on each of the three CHIRP products. This involved
 selecting a granule with some views of warm ocean and cold clouds and comparing geolocation
@@ -71,7 +83,7 @@ translation code and compared to those from the CHIRP granule. There are typical
 observations per granule. The values are simply compared as shown in the following figures.
 
 \section{Results}
-\label{sec:org8adc8c9}
+\label{sec:orgba76714}
 
 The results are shown in graphical form in the following figures. 
 Figures show the location of the granule, with the LW window channel near 900 \(cm^{-1}\) 
@@ -82,7 +94,7 @@ Finally the spectrum of the granule mean and standard deviation of the samples a
 the difference between CHIRP and parent product. 
 
 \subsection{CHIRP.J1}
-\label{sec:org46d2734}
+\label{sec:orge1203c5}
 
 This set of results relates to the CHIRP from JPSS-1 and its parent.
 
@@ -97,28 +109,28 @@ Figure Fig. \ref{fig:chirp_j1_spectrum_std} upper panel shows the standard devia
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,width=9cm]{./figs/2020d001g120_chirp_j1_900cn_bt_map.pdf}
-\caption{\label{fig:orgca42ef6}
+\caption{\label{fig:org3e68524}
 Location map of test granule. Shown is the 900cm-1 channel brightness temperature.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g120_chirp_j1_geo_diff.pdf}
-\caption{\label{fig:orgfa70246}
+\caption{\label{fig:org74d4dde}
 Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g120_chirp_j1_bt_spectrum_mean.pdf}
-\caption{\label{fig:org7a964df}
+\caption{\label{fig:org9ce4ece}
 Mean spectral BT for granule (upper) Difference (lower).}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g120_chirp_j1_bt_spectrum_std.pdf}
-\caption{\label{fig:org44ee57e}
+\caption{\label{fig:org371f5d2}
 Standard deviation of samples (upper) Difference (lower).}
 \end{figure}
 
@@ -126,7 +138,7 @@ Standard deviation of samples (upper) Difference (lower).}
 
 
 \subsection{CHIRP.SNPP}
-\label{sec:orgd452a14}
+\label{sec:orgbfdef10}
 
 This set of results relates to the CHIRP from SNPP and its parent.
 
@@ -141,35 +153,35 @@ Figure Fig. \ref{fig:chirp_snpp_spectrum_std} upper panel shows the standard dev
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,width=9cm]{./figs/2020d001g238_900cm_bt_map_snpp.pdf}
-\caption{\label{fig:org1ad1365}
+\caption{\label{fig:org6d8e7ff}
 Location map of test granule. Shown is the 900cm-1 channel brightness temperature.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g238_geo_diff_snpp.pdf}
-\caption{\label{fig:org6431cfd}
+\caption{\label{fig:org683ff56}
 Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g238_bt_spectrum_mean.pdf}
-\caption{\label{fig:org307d829}
+\caption{\label{fig:orgabe0f66}
 Mean spectral BT for granule (upper) Difference (lower).}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g238_bt_spectrum_std.pdf}
-\caption{\label{fig:org084790a}
+\caption{\label{fig:org7eac56f}
 Standard deviation of samples (upper) Difference (lower).}
 \end{figure}
 
 
 
 \subsection{CHIRP.AQ}
-\label{sec:orgdc9dda5}
+\label{sec:orgc1d1ae4}
 
 This set of results relates to the CHIRP from AIRS and its parent.
 
@@ -184,32 +196,41 @@ Figure Fig. \ref{fig:chirp_aq_spectrum_std} upper panel shows the standard devia
 \begin{figure}[htbp]
 \centering
 \includegraphics[angle=0,width=9cm]{./figs/2020d001g235_chirp_aq_900cm_bt_map.pdf}
-\caption{\label{fig:orgd919374}
+\caption{\label{fig:org4aee838}
 Location map of test granule. Shown is the 900cm-1 channel brightness temperature.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g235_chirp_aq_geo_diff.pdf}
-\caption{\label{fig:org7d36680}
+\caption{\label{fig:orgc740253}
 Geolocation (latitude, longitude, time) difference by sample in granule. LW channel difference.}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g235_chirp_aq_bt_spectrum_mean.pdf}
-\caption{\label{fig:orgc712f95}
+\caption{\label{fig:orgcaeaa4c}
 Mean spectral BT for granule (upper) Difference (lower).}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./figs/2020d001g235_chirp_aq_bt_spectrum_std.pdf}
-\caption{\label{fig:org8647f29}
+\caption{\label{fig:orgb886f87}
 Standard deviation of samples (upper) Difference (lower).}
 \end{figure}
 
 
 \section{Conclusions}
-\label{sec:org3c42b5a}
+\label{sec:orgac5d9fa}
+
+A functional test was performed on the three CHIRP products by comparing geolocation and
+radiance data for one granule each with the CHIRP parent L1b/c granule, after processing the
+parent data with the spectral radiometric translation suite used at UMBC/JCET.
+
+The results indicate that the CHIRP product and therefore the DAAC processing comforms to that expected by the UMBC/JCET design
+team. 
+
+[END]
 \end{document}

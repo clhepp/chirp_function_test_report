@@ -185,3 +185,12 @@ Figure Fig. \ref{fig:chirp_aq_spectrum_std} upper panel shows the standard devia
 
 
 * Conclusions
+
+A functional test was performed on the three CHIRP products by comparing geolocation and
+radiance data for one granule each with the CHIRP parent L1b/c granule, after processing the
+parent data with the spectral radiometric translation suite used at UMBC/JCET.
+
+The results indicate that the CHIRP product and therefore the DAAC processing comforms to that expected by the UMBC/JCET design
+team. 
+
+[END]
